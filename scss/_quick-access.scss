@@ -1,0 +1,41 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.quick-access {
+  background: v.$primary;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    @include m.respond-to(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    padding: 24px 20px;
+    text-align: center;
+    color: rgba(v.$white, 0.8);
+    cursor: pointer;
+    border-right: 1px solid rgba(v.$white, 0.1);
+    @include m.transition;
+
+    &:last-child { border-right: none; }
+
+    &:hover {
+      background: rgba(v.$white, 0.1);
+      color: v.$white;
+    }
+  }
+
+  &__icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  &__label {
+    font-size: 13px;
+    font-weight: 500;
+  }
+}

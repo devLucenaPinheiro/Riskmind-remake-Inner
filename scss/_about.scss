@@ -1,0 +1,85 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.about {
+  background: v.$light-bg;
+  padding: 80px 0;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+
+    @include m.respond-to(md) { grid-template-columns: 1fr; }
+  }
+
+  &__content {
+    .section-subtitle { max-width: 100%; }
+  }
+
+  &__features {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    &-icon { @include m.icon-box(44px, 20px); }
+
+    &-text {
+      strong {
+        display: block;
+        font-size: 15px;
+        font-weight: 600;
+        color: v.$primary;
+        margin-bottom: 4px;
+      }
+
+      p {
+        font-size: 14px;
+        color: v.$text-mid;
+      }
+    }
+  }
+
+  &__visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  &__metric {
+    background: v.$white;
+    border-radius: v.$radius-md;
+    padding: 28px 24px;
+    box-shadow: v.$shadow-sm;
+    text-align: center;
+    border-bottom: 3px solid v.$accent;
+
+    &--featured {
+      grid-column: 1 / -1;
+      border-bottom-color: v.$cta;
+
+      .about__metric-value { color: v.$cta; }
+    }
+
+    &-value {
+      font-size: 40px;
+      font-weight: 800;
+      color: v.$primary;
+      line-height: 1;
+    }
+
+    &-label {
+      font-size: 13px;
+      color: v.$text-mid;
+      margin-top: 8px;
+    }
+  }
+}

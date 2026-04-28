@@ -1,0 +1,63 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.clients {
+  padding: 80px 0;
+  background: v.$light-bg;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+}
+
+.clients-carousel {
+  width: 100%;
+  position: relative;
+  padding: 16px 0;
+  overflow: hidden;
+
+  @supports not (mask-image: linear-gradient()) {
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 140px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    &::before { left: 0;  background: linear-gradient(to right, v.$light-bg, transparent); }
+    &::after  { right: 0; background: linear-gradient(to left,  v.$light-bg, transparent); }
+  }
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: max-content;
+  will-change: transform;
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  @include m.flex-center;
+}
+
+.client-logo {
+  background: v.$white;
+  border-radius: v.$radius-sm;
+  padding: 20px 36px;
+  font-weight: 700;
+  font-size: 15px;
+  color: v.$text-light;
+  box-shadow: v.$shadow-sm;
+  @include m.transition;
+  white-space: nowrap;
+
+  &:hover {
+    color: v.$primary;
+    box-shadow: v.$shadow-md;
+  }
+}

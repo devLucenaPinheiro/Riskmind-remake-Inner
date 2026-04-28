@@ -1,0 +1,60 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: v.$radius-sm;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  @include m.transition;
+
+  &--primary {
+    background: v.$cta;
+    color: v.$white;
+
+    &:hover {
+      background: v.$cta-hover;
+      transform: translateY(-1px);
+      box-shadow: v.$shadow-md;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: v.$white;
+    border: 2px solid v.$white;
+
+    &:hover {
+      background: v.$white;
+      color: v.$primary;
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: v.$primary;
+    border: 2px solid v.$primary;
+
+    &:hover {
+      background: v.$primary;
+      color: v.$white;
+    }
+  }
+
+  &--white {
+    background: v.$white;
+    color: v.$cta;
+    font-weight: 700;
+
+    &:hover {
+      background: v.$light-bg;
+      transform: translateY(-1px);
+      box-shadow: v.$shadow-md;
+    }
+  }
+}

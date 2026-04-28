@@ -1,0 +1,49 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.values {
+  padding: 100px 0;
+  background: v.$primary;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 64px;
+
+    .section-label { color: v.$accent; }
+    .section-title  { color: v.$white; }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+
+    @include m.respond-to(lg) { grid-template-columns: repeat(3, 1fr); }
+    @include m.respond-to(md) { grid-template-columns: repeat(2, 1fr); }
+  }
+}
+
+.value-card {
+  background: rgba(v.$white, 0.08);
+  border: 1px solid rgba(v.$white, 0.12);
+  border-radius: v.$radius-md;
+  padding: 32px 20px;
+  text-align: center;
+  @include m.transition(all, 0.3s);
+
+  &:hover {
+    background: rgba(v.$white, 0.15);
+    transform: translateY(-4px);
+  }
+
+  &__icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: v.$white;
+  }
+}

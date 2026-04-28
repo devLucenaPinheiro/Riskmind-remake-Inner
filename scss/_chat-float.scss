@@ -1,0 +1,23 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.chat-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+
+  &__btn {
+    width: 60px;
+    height: 60px;
+    background: v.$gradient-primary;
+    border-radius: 50%;
+    @include m.flex-center;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 8px 32px rgba(0, 81, 200, 0.4);
+    @include m.transition(transform);
+
+    &:hover { transform: scale(1.1); }
+  }
+}

@@ -1,0 +1,31 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.top-bar {
+  background: v.$primary;
+  color: rgba(v.$white, 0.75);
+  font-size: 13px;
+  padding: 8px 0;
+
+  .container {
+    @include m.flex-between;
+  }
+
+  &__links {
+    display: flex;
+
+    a {
+      color: rgba(v.$white, 0.75);
+      margin-left: 20px;
+      @include m.transition(color);
+
+      &:hover {
+        color: v.$white;
+      }
+    }
+  }
+
+  @include m.respond-to(md) {
+    &__links { display: none; }
+  }
+}

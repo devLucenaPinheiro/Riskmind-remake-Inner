@@ -1,0 +1,49 @@
+$primary:     #003087;
+$primary-mid: #0051C8;
+$accent:      #0099D8;
+$cta:         #E8521A;
+$cta-hover:   #C44010;
+
+$light-bg:    #F4F7FB;
+$white:       #FFFFFF;
+$text-dark:   #1A1A2E;
+$text-mid:    #4A5568;
+$text-light:  #718096;
+$border:      #E2E8F0;
+
+$shadow-sm:   0 2px 8px rgba(0, 48, 135, 0.08);
+$shadow-md:   0 8px 32px rgba(0, 48, 135, 0.12);
+$shadow-lg:   0 20px 60px rgba(0, 48, 135, 0.18);
+
+$radius-sm:   6px;
+$radius-md:   12px;
+$radius-lg:   20px;
+
+$font-base:   'Inter', sans-serif;
+
+$bp-lg:       1024px;
+$bp-md:       768px;
+
+$gradient-primary: linear-gradient(135deg, $primary, $accent);
+$gradient-hero:    linear-gradient(135deg, $primary 0%, $primary-mid 50%, $accent 100%);
+$gradient-cta:     linear-gradient(135deg, $cta 0%, $cta-hover 100%);
+
+:root {
+  --primary:     #{$primary};
+  --primary-mid: #{$primary-mid};
+  --accent:      #{$accent};
+  --cta:         #{$cta};
+  --cta-hover:   #{$cta-hover};
+  --light-bg:    #{$light-bg};
+  --white:       #{$white};
+  --text-dark:   #{$text-dark};
+  --text-mid:    #{$text-mid};
+  --text-light:  #{$text-light};
+  --border:      #{$border};
+  --shadow-sm:   #{$shadow-sm};
+  --shadow-md:   #{$shadow-md};
+  --shadow-lg:   #{$shadow-lg};
+  --radius-sm:   #{$radius-sm};
+  --radius-md:   #{$radius-md};
+  --radius-lg:   #{$radius-lg};
+}

@@ -1,7 +1,7 @@
 @use 'variables' as v;
 
 .section-label {
-  font-size: 12px;
+  font-size: 32px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -10,7 +10,7 @@
 }
 
 .section-title {
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: clamp(24px, 3.5vw, 36px);
   font-weight: 800;
   color: v.$primary;
   line-height: 1.2;

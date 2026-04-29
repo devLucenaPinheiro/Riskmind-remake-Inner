@@ -53,7 +53,7 @@ ul {
 }
 
 .section-label {
-  font-size: 12px;
+  font-size: 32px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -62,7 +62,7 @@ ul {
 }
 
 .section-title {
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: clamp(24px, 3.5vw, 36px);
   font-weight: 800;
   color: #003087;
   line-height: 1.2;
@@ -786,7 +786,7 @@ ul {
 }
 
 .clients {
-  padding: 80px 0;
+  padding: 80px 0 48px;
   background: #F4F7FB;
 }
 .clients__header {
@@ -796,62 +796,66 @@ ul {
 
 .clients-carousel {
   width: 100%;
-  position: relative;
-  padding: 16px 0;
   overflow: hidden;
-  display: inline-flex;
-  justify-content: center;
+  position: relative;
+  padding: 32px 0;
 }
-@supports not ((-webkit-mask-image: linear-gradient()) or (mask-image: linear-gradient())) {
-  .clients-carousel::before, .clients-carousel::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 140px;
-    z-index: 2;
-    pointer-events: none;
-  }
-  .clients-carousel::before {
-    left: 0;
-    background: linear-gradient(to right, #F4F7FB, transparent);
-  }
-  .clients-carousel::after {
-    right: 0;
-    background: linear-gradient(to left, #F4F7FB, transparent);
-  }
+.clients-carousel::before, .clients-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+.clients-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, #F4F7FB, transparent);
+}
+.clients-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, #F4F7FB, transparent);
 }
 
 .carousel-track {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 80px;
   width: -moz-max-content;
   width: max-content;
   will-change: transform;
+  padding: 0 40px;
 }
 
 .carousel-item {
   flex-shrink: 0;
+  width: 160px;
+  height: 160px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
-
-.client-logo {
-  background: #FFFFFF;
-  border-radius: 6px;
-  padding: 20px 36px;
-  font-weight: 700;
-  font-size: 15px;
-  color: #718096;
-  box-shadow: 0 2px 8px rgba(0, 48, 135, 0.08);
-  transition: all 0.2s ease;
-  white-space: nowrap;
+.carousel-item img {
+  width: auto;
+  height: 100%;
+  max-width: 160px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  display: block;
+  transition: transform 0.3s ease;
 }
-.client-logo:hover {
-  color: #003087;
-  box-shadow: 0 8px 32px rgba(0, 48, 135, 0.12);
+.carousel-item:hover img {
+  transform: scale(1.15);
 }
 
 .footer {

@@ -44,8 +44,8 @@ function initCarousel() {
     requestAnimationFrame(animate)
   }
 
-  carousel.addEventListener('mouseenter', function() { paused = true; })
-  carousel.addEventListener('mouseleave', function() { paused = false; })
+  carousel.addEventListener('mouseenter', function() { paused = true })
+  carousel.addEventListener('mouseleave', function() { paused = false })
 
   document.addEventListener('visibilitychange', function() {
     paused = document.hidden

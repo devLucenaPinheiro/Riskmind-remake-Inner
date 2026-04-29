@@ -21,23 +21,30 @@
   </div>
 
   <nav class="navbar">
-    <div class="container">
-      <a href="#" class="logo">
-        <div class="logo__icon">R</div>
-        <span class="logo__text">Risk<span>mind</span></span>
-      </a>
-      <div class="nav-links">
-        <a href="#solucoes">Soluções</a>
-        <a href="#sobre">A Riskmind</a>
-        <a href="#setores">Setores</a>
-        <a href="#clientes">Clientes</a>
-        <a href="#contato">Fale Conosco</a>
-      </div>
-      <div class="nav-cta">
-        <a href="#contato" class="btn btn--ghost">Fale Conosco</a>
-      </div>
+  <div class="container">
+    <a href="#" class="logo">
+      <div class="logo__icon">R</div>
+      <span class="logo__text">Risk<span>mind</span></span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="#solucoes">Soluções</a>
+      <a href="#sobre">A Riskmind</a>
+      <a href="#setores">Setores</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#contato">Fale Conosco</a>
     </div>
-  </nav>
+    <div class="nav-cta">
+      <a href="#contato" class="btn btn--ghost">Fale Conosco</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-overlay" id="nav-overlay"></div>
 
   <section class="hero">
     <div class="container">
@@ -376,5 +383,6 @@
   <script src="js/countup.js"></script>
   <script src="js/carousel.js"></script>
   <script src="js/animations.js"></script>
+  <script src="js/hamburger.js"></script>
  </body>
 </html>

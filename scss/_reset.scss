@@ -1,5 +1,3 @@
-@use 'variables' as v;
-
 *,
 *::before,
 *::after {
@@ -13,9 +11,9 @@ html {
 }
 
 body {
-  font-family: v.$font-base;
-  color: v.$text-dark;
-  background: v.$white;
+  font-family: "Inter", sans-serif;
+  color: #1A1A2E;
+  background: #FFFFFF;
   line-height: 1.6;
   font-size: 16px;
 }

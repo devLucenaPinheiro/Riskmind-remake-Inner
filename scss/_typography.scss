@@ -1,25 +1,23 @@
-@use 'variables' as v;
-
 .section-label {
   font-size: 32px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: v.$accent;
+  color: #0099D8;
   margin-bottom: 12px;
 }
 
 .section-title {
   font-size: clamp(24px, 3.5vw, 36px);
   font-weight: 800;
-  color: v.$primary;
+  color: #003087;
   line-height: 1.2;
   margin-bottom: 16px;
 }
 
 .section-subtitle {
   font-size: 17px;
-  color: v.$text-mid;
+  color: #4A5568;
   max-width: 580px;
   line-height: 1.7;
 }

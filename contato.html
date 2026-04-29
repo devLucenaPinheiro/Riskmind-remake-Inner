@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fale Conosco | Riskmind</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="scss/main.css"/>
+  <link rel="stylesheet" href="scss/contato.css"/>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <span>Soluções em Data Science para o mercado de seguros desde 2006</span>
+      <div class="top-bar__links">
+        <a href="#">Portal do Cliente</a>
+        <a href="#">Área do Parceiro</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo__icon">R</div>
+        <span class="logo__text">Risk<span>mind</span></span>
+      </a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <section class="contact-page">
+  <div class="container">
+    <div class="contact-page__grid">
+
+      <div class="contact-page__header">
+        <div class="section-label">Contato</div>
+        <h1 class="section-title">Fale com a Riskmind</h1>
+        <div class="contact-info">
+          <div class="contact-info__card">
+            <div class="contact-info__icon">📧</div>
+            <div class="contact-info__title">E-mail</div>
+            <div class="contact-info__text">contato@riskmind.com.br</div>
+          </div>
+          <div class="contact-info__card">
+            <div class="contact-info__icon">💼</div>
+            <div class="contact-info__title">LinkedIn</div>
+            <div class="contact-info__text">
+              <a href="https://www.linkedin.com/company/riskmind" target="_blank" rel="noopener noreferrer">
+                linkedin.com/company/riskmind
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <form class="contact-form" id="contact-form">
+          <div class="contact-form__group">
+            <label class="contact-form__label" for="nome">Nome completo</label>
+            <input class="contact-form__input" type="text" id="nome" name="nome" placeholder="Seu nome" required />
+          </div>
+          <div class="contact-form__group">
+            <label class="contact-form__label" for="email">E-mail</label>
+            <input class="contact-form__input" type="email" id="email" name="email" placeholder="seu@email.com" required />
+          </div>
+          <div class="contact-form__group">
+            <label class="contact-form__label" for="email">Assunto</label>
+            <input class="contact-form__input" type="text" id="assunto" name="assunto" placeholder="Assunto" required />
+          </div>
+          <div class="contact-form__group">
+            <label class="contact-form__label" for="mensagem">Mensagem</label>
+            <textarea class="contact-form__input contact-form__textarea" id="mensagem" name="mensagem" placeholder="Descreva como podemos ajudar..." rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary contact-form__submit">
+            Enviar mensagem →
+          </button>
+          <div class="contact-form__feedback" id="form-feedback"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <footer class="footer-minimal">
+  <div class="container">
+    <span>© 2025 Riskmind Consultoria Ltda. Todos os direitos reservados.</span>
+    <div class="footer__legal">
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/hamburger.js"></script>
+  <script src="js/contato.js"></script>
+</body>
+</html>

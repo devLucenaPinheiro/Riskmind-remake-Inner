@@ -3,7 +3,7 @@
 
 .hero {
   background: v.$gradient-hero;
-  padding: 100px 0 130px;
+  padding: 100px 0 110px;
   position: relative;
   overflow: hidden;
 
@@ -168,4 +168,10 @@
       flex-shrink: 0;
     }
   }
+}
+
+.hero__content,
+.hero__visual {
+  will-change: transform;
+  transition: transform 0.05s linear;
 }

@@ -16,6 +16,9 @@
   position: relative;
   padding: 16px 0;
   overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+
 
   @supports not (mask-image: linear-gradient()) {
     &::before,

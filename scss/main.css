@@ -275,11 +275,37 @@ ul {
   margin-bottom: 24px;
 }
 .hero__badge::before {
-  content: "";
+  display: none;
+}
+.hero .hero__badge-dot {
   width: 8px;
   height: 8px;
   background: #4ADE80;
   border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+}
+.hero .hero__badge-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #4ADE80;
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+.hero .hero__badge-text {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: inline-block;
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
 }
 .hero__title {
   font-size: clamp(36px, 5vw, 58px);
@@ -773,6 +799,8 @@ ul {
   position: relative;
   padding: 16px 0;
   overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
 }
 @supports not ((-webkit-mask-image: linear-gradient()) or (mask-image: linear-gradient())) {
   .clients-carousel::before, .clients-carousel::after {
